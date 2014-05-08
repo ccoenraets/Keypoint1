@@ -1,0 +1,25 @@
+.slide.bg-intro {
+    background: url('../../images/intro.jpg');
+}
+
+.slide.bg {
+    background: url('../../images/default.jpg');
+}
+
+#logo {
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+    width: 100px;
+    height: 48px;
+    background: url('../img/logo.png');
+    background-size: 100%;
+    z-index: 20;
+}
+
+@media all and (min-width: 800px) {
+    #logo {
+        width: 175px;
+        height: 83px;
+    }
+}

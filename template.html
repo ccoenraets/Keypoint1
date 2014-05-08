@@ -1,0 +1,59 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" sidebar="false">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+        <link href="{!URLFOR($Resource.slides, 'assets/css/keypoint-bundle.css')}" rel="stylesheet" />
+        <link href="{!URLFOR($Resource.slides, 'assets/css/slides.css')}" rel="stylesheet" />
+    </head>
+
+    <body>
+
+    <div id="logo"></div>
+    <div id="wrapper"></div>
+
+    <div id="slides" data-base-url="{!URLFOR($Resource.slides, '/')}">
+
+        <div class="slide">
+            <div style="position: absolute;bottom: 20%;left:10%;text-align:left;">
+                <h1 >New Presentation</h1>
+                <br/>
+                <h2>Christophe Coenraets<br/>@ccoenraets</h2>
+            </div>
+        </div>
+
+        <div class="slide bg">
+            <h1>Me</h1>
+            <div class="speaker-info">
+                <p><i class="icon ion-person"></i>Christophe Coenraets</p>
+                <p><i class="icon ion-location"></i>Boston, MA</p>
+                <p><i class="icon ion-social-twitter"></i>@ccoenraets</p>
+                <p><i class="icon ion-social-rss"></i>http://coenraets.org</p>
+                <p><i class="icon ion-social-github"></i>https://github.com/ccoenraets</p>
+            </div>
+        </div>
+
+        <div class="slide bg">
+            <h1>First Slide</h1>
+            This is my first slide
+        </div>
+
+    </div> <!-- end of '#slides' -->
+
+    <button id="menu-btn" class="button button-clear icon ion-navicon"></button>
+
+    <div id="menu" class="dark-bg">
+        <div class="title">Keypoint</div>
+        <div class="scroller cf">
+            <ol id="list" class="list"></ol>
+        </div>
+    </div>
+
+    <script src="{!URLFOR($Resource.slides, 'lib/keypoint-bundle.js')}"></script>
+    <!-- Custom interactions for this presentation -->
+    <script src="{!URLFOR($Resource.slides, 'js/slides.js')}"></script>
+    <script>
+        keypoint.init('{!$Api.Session_ID}');
+    </script>
+
+    </body>
+</apex:page>

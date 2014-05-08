@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Keypoint1</title>
+    <link href="assets/css/keypoint-bundle.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/slides.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="logo"></div>
+
+<div id="wrapper"></div>
+
+<div id="slides" data-base-url="">
+
+<div class="slide bg-intro">
+    <div style="position: absolute;bottom: 20%;left:10%;text-align:left;">
+        <h1 >Keypoint1<br/>Mobile First Slides for Salesforce1</h1>
+        <br/>
+        <h2>Christophe Coenraets<br/>@ccoenraets</h2>
+    </div>
+</div>
+
+<div class="slide bg">
+    <h1>Me</h1>
+    <div class="speaker-info">
+        <p><i class="icon ion-person"></i>Christophe Coenraets</p>
+        <p><i class="icon ion-location"></i>Boston, MA</p>
+        <p><i class="icon ion-social-twitter"></i>@ccoenraets</p>
+        <p><i class="icon ion-social-rss"></i>http://coenraets.org</p>
+        <p><i class="icon ion-social-github"></i>https://github.com/ccoenraets</p>
+    </div>
+</div>
+
+<div class="slide bg">
+    <h1>What's This?</h1>
+    A single page application in a Visualforce page
+</div>
+
+<div class="slide">
+    <h1>Characteristics</h1>
+    <ul>
+        <li>100% Web Standards (HTML, JS, CSS)</li>
+        <li>Responsive (iPhone to big screens)</li>
+        <li>Customizable through CSS</li>
+        <li>Connected: Can show Salesforce data</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Responsive</h1>
+    <img data-src="images/responsive_book.jpg"/>
+</div>
+
+<div class="slide">
+    <h1>Run your slides on your iPad</h1>
+    <img data-src="images/ipad.png"/>
+</div>
+
+<div class="slide">
+    <h1>... on your phone</h1>
+    <img data-src="images/iphone.png"/>
+</div>
+
+
+<div class="slide">
+    <h1>... or in your browser<br/>(it's a Visualforce page)</h1>
+    <img data-src="images/browser.png"/>
+</div>
+
+<div class="slide">
+    <h1>Optimized for Performance</h1>
+    Only three slides in the DOM at any given time (current, previous, next)
+</div>
+
+<div class="slide">
+    <h1>Show Live Salesforce Data</h1>
+    <h2>Top 5 Opportunities</h2>
+    <ol id="top5"></ol>
+</div>
+
+<div class="slide bg">
+    <h1>Show Data Based on Any Query</h1>
+    <textarea id="soql-query" style="height: 20%">SELECT Name, Amount FROM Opportunity ORDER BY Amount DESC LIMIT 5</textarea>
+    <button id="soql-btn" class="button" style="margin: 20px;">Execute SOQL</button>
+    <textarea id="soql-result" style="height:40%" class="needsclick"></textarea>
+</div>
+
+<div class="slide">
+<h1>Creating a Slide</h1>
+<xmp class="prettyprint"><div class="slide">
+    <h1>My First Slide</h1>
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ul>
+</div>
+</xmp>
+</div>
+
+<div class="slide">
+    <h1>My First Slide</h1>
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ul>
+</div>
+
+<div class="slide">
+<h1>Using Images</h1>
+<xmp class="prettyprint"><div class="slide">
+    <h1>A Screenshot</h1>
+    <img data-src="img/iphone.png"/>
+</div>
+</xmp>
+</div>
+
+<div class="slide">
+    <h1>A Screenshot</h1>
+    <img data-src="images/screenshot.png"/>
+</div>
+
+<div class="slide bg">
+<h1>Custom Background</h1>
+<xmp class="prettyprint"><div class="slide bg">
+
+</div>
+</xmp>
+</div>
+
+<div class="slide">
+    <h1>Built with</h1>
+    <ul>
+        <li>SwipeView</li>
+        <li>Prettify</li>
+        <li>Ionic framework</li>
+        <li>Fastclick</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Thank You</h1>
+    <div class="speaker-info">
+        <p><i class="icon ion-person"></i>Christophe Coenraets</p>
+        <p><i class="icon ion-location"></i>Boston, MA</p>
+        <p><i class="icon ion-social-twitter"></i>@ccoenraets</p>
+        <p><i class="icon ion-social-rss"></i>http://coenraets.org</p>
+        <p><i class="icon ion-social-github"></i>https://github.com/ccoenraets</p>
+    </div>
+</div>
+
+</div> <!-- end of '#slides' -->
+
+<button id="menu-btn" class="button button-clear icon ion-navicon"></button>
+
+<div id="menu" class="dark-bg">
+    <div class="title">Keypoint</div>
+    <div class="scroller cf">
+        <ol id="list" class="list"></ol>
+    </div>
+</div>
+
+<script src="lib/keypoint-bundle.js"></script>
+
+<!-- Custom interactions for this presentation -->
+<script src="js/slides.js"></script>
+<script>
+    keypoint.init();
+</script>
+
+</body>
+</html>
